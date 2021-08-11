@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import "antd/dist/antd.css";
 import Router from './router'
+import { Provider } from 'react-redux'
+import store from './store'
 import './styles/base.scss'
 
 ReactDOM.render(
-  <Router />,
+  <Provider store={store}>
+    <Router />
+  </Provider>,
   document.getElementById('root')
 );
 

@@ -9,14 +9,12 @@ function Container(props) {
   let ContentComponent = props.component
   return (
     <Layout>
+      <UseSidebar />
       <Layout>
-        <UseSidebar />
-        <Layout>
-          <UseHeader />
-          <Content>
-            <ContentComponent />
-          </Content>
-        </Layout>
+        <UseHeader />
+        <Content>
+          <ContentComponent />
+        </Content>
       </Layout>
     </Layout>
   );
